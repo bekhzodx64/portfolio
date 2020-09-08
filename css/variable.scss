@@ -1,0 +1,10 @@
+$maxWidth: 1180;
+@mixin font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 320;
+  font-size: calc(
+    #{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth})
+  );
+}
+
+// @include font (36,22) - для того что бы использовать переменного (размер для пк - размер для моб)

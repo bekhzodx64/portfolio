@@ -3,7 +3,15 @@ import { AiFillGithub, AiFillLinkedin, AiFillYoutube } from 'react-icons/ai';
 import { GoLocation } from 'react-icons/go';
 import { GiTie } from 'react-icons/gi';
 
+import { useTheme } from 'next-themes';
+
 const Sidebar = () => {
+	const { theme, setTheme } = useTheme();
+
+	const changeTheme = () => {
+		setTheme(theme === 'light' ? 'dark' : 'light');
+	};
+
 	return (
 		<div>
 			<Image
@@ -17,10 +25,12 @@ const Sidebar = () => {
 				<span>#BekhzoD</span>
 				<span>_x64</span>
 			</h3>
-			<p className='px-2 py-1 my-3 bg-gray-200 rounded-full'>Web Developer</p>
+			<p className='px-2 py-1 my-3 bg-gray-200 dark:bg-dark-200 rounded-full'>
+				Web Developer
+			</p>
 			<a
 				href=''
-				className='px-2 py-1 my-3 bg-gray-200 rounded-full flex items-center justify-center'
+				className='px-2 py-1 my-3 bg-gray-200 dark:bg-dark-200 rounded-full flex items-center justify-center'
 				download='name'>
 				<GiTie className='w-6 h-6' />
 				Download Resume
@@ -38,7 +48,7 @@ const Sidebar = () => {
 				</a>
 			</div>
 			{/* address */}
-			<div className='my-5 py-4 bg-gray-200 -mx-4 space-y-2'>
+			<div className='my-5 py-4 bg-gray-200 dark:bg-dark-200 -mx-4 space-y-2'>
 				<div className='flex items-center justify-center space-x-2'>
 					<GoLocation />
 					<span>Uzbekistan, Tashkent</span>
@@ -53,7 +63,9 @@ const Sidebar = () => {
 				onClick={() => window.open('https://t.me/bekhzodx64')}>
 				Text Me
 			</button>
-			<button className='bg-gradient-to-r from-green to-blue-400 w-8/12 rounded-full py-2 px-5 text-white my-2 outline-none'>
+			<button
+				className='bg-gradient-to-r from-green to-blue-400 w-8/12 rounded-full py-2 px-5 text-white my-2 outline-none'
+				onClick={changeTheme}>
 				Toggle Theme
 			</button>
 		</div>

@@ -1,10 +1,16 @@
 module.exports = {
-	content: [
-		'./pages/**/*.{js,ts,jsx,tsx}',
-		'./components/**/*.{js,ts,jsx,tsx}',
-	],
+	content: ['./pages/**/*.tsx', './components/**/*.tsx'],
 	theme: {
-		extend: {},
+		fontFamily: {
+			kaushan: ['Kaushan Script'],
+		},
+		extend: {
+			colors: {
+				green: {
+					DEFAULT: '#00f260',
+				}
+			}
+		},
 	},
 	plugins: [],
 };

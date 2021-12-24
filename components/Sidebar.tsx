@@ -31,9 +31,9 @@ const Sidebar = () => {
 				Web Developer
 			</p>
 			<a
-				href=''
+				href='/images/mogo.png'
 				className='px-2 py-1 my-3 bg-gray-200 dark:bg-dark-200 rounded-full flex items-center justify-center'
-				download='name'>
+				download='mogo.png'>
 				<GiTie className='w-6 h-6' />
 				Download Resume
 			</a>

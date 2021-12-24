@@ -89,6 +89,7 @@ export const tools: ISkill[] = [
 
 export const projects: IProject[] = [
 	{
+		id: 1,
 		name: 'Mogo',
 		description: 'This is my first project.',
 		image_path: '/images/mogo.png',
@@ -98,6 +99,7 @@ export const projects: IProject[] = [
 		key_techs: ['HTML', 'CSS'],
 	},
 	{
+		id: 2,
 		name: 'Mogo',
 		description: 'This is my first project.',
 		image_path: '/images/mogo.png',
@@ -107,6 +109,7 @@ export const projects: IProject[] = [
 		key_techs: ['HTML', 'CSS'],
 	},
 	{
+		id: 3,
 		name: 'Mogo',
 		description: 'This is my first project.',
 		image_path: '/images/mogo.png',
@@ -116,6 +119,7 @@ export const projects: IProject[] = [
 		key_techs: ['HTML', 'CSS'],
 	},
 	{
+		id: 4,
 		name: 'Mogo',
 		description: 'This is my first project.',
 		image_path: '/images/mogo.png',
@@ -125,6 +129,7 @@ export const projects: IProject[] = [
 		key_techs: ['HTML', 'CSS'],
 	},
 	{
+		id: 5,
 		name: 'Mogo',
 		description: 'This is my first project.',
 		image_path: '/images/mogo.png',
@@ -134,6 +139,7 @@ export const projects: IProject[] = [
 		key_techs: ['HTML', 'CSS'],
 	},
 	{
+		id: 6,
 		name: 'Mogo',
 		description: 'This is my first project.',
 		image_path: '/images/mogo.png',
@@ -143,6 +149,7 @@ export const projects: IProject[] = [
 		key_techs: ['HTML', 'CSS'],
 	},
 	{
+		id: 7,
 		name: 'Mogo',
 		description: 'This is my first project.',
 		image_path: '/images/mogo.png',
@@ -152,6 +159,7 @@ export const projects: IProject[] = [
 		key_techs: ['HTML', 'CSS'],
 	},
 	{
+		id: 8,
 		name: 'Mogo',
 		description: 'This is my first project.',
 		image_path: '/images/mogo.png',

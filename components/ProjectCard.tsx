@@ -8,8 +8,11 @@ import { stagger, fadeInUp } from '../animations';
 
 const ProjectCard: FunctionComponent<{
 	project: IProject;
+	showDetail: null | number,
+	setShowDetail: (id: null | number) => void;
 }> = ({
 	project: {
+		id,
 		name,
 		image_path,
 		category,
@@ -18,8 +21,10 @@ const ProjectCard: FunctionComponent<{
 		github_url,
 		key_techs,
 	},
+	showDetail,
+	setShowDetail,
 }) => {
-	const [showDetail, setShowDetail] = useState(false);
+	
 
 	return (
 		<div>
@@ -27,15 +32,15 @@ const ProjectCard: FunctionComponent<{
 				src={image_path}
 				alt={name}
 				className='cursor-pointer'
-				onClick={() => setShowDetail(true)}
+				onClick={() => setShowDetail(id)}
 				width='300'
 				height='150'
 				layout='responsive'
 			/>
 			<p className='my-2 text-center'>{name}</p>
 
-			{showDetail && (
-				<div className='grid md:grid-cols-2 absolute top-0 left-0 z-10 h-auto w-full gap-x-12 text-black bg-gray-100 dark:text-white dark:bg-dark-100 p-2'>
+			{showDetail === id && (
+				<div className='grid rounded-lg md:grid-cols-2 absolute top-0 left-0 z-10 h-auto w-full gap-x-12 text-black bg-gray-100 dark:text-white dark:bg-dark-100 p-2 md:p-10'>
 					<motion.div variants={stagger} initial='initial' animate='animate'>
 						<motion.div variants={fadeInUp}>
 							<Image
@@ -78,7 +83,7 @@ const ProjectCard: FunctionComponent<{
 					</motion.div>
 
 					<button
-						onClick={() => setShowDetail(false)}
+						onClick={() => setShowDetail(null)}
 						className='absolute top-3 right-3 rounded-full outline-none bg-gray-200 dark:bg-dark-200'>
 						<MdClose size={30} />
 					</button>

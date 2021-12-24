@@ -1,4 +1,4 @@
-import { IService, ISkill } from './type';
+import { IService, ISkill, IProject } from './type';
 import { RiComputerLine } from 'react-icons/ri';
 import { BsCircleFill } from 'react-icons/bs';
 
@@ -99,3 +99,77 @@ export const tools: ISkill[] = [
 	},
 ];
 
+export const projects: IProject[] = [
+	{
+		name: 'Mogo',
+		description: 'This is my first project.',
+		image_path: '/images/mogo.png',
+		deployed_url: 'https://bekhzodx64.github.io/mogo/',
+		github_url: 'https://github.com/bekhzodx64/mogo',
+		category: ['react'],
+		key_techs: ['HTML', 'CSS'],
+	},
+	{
+		name: 'Mogo',
+		description: 'This is my first project.',
+		image_path: '/images/mogo.png',
+		deployed_url: 'https://bekhzodx64.github.io/mogo/',
+		github_url: 'https://github.com/bekhzodx64/mogo',
+		category: ['node'],
+		key_techs: ['HTML', 'CSS'],
+	},
+	{
+		name: 'Mogo',
+		description: 'This is my first project.',
+		image_path: '/images/mogo.png',
+		deployed_url: 'https://bekhzodx64.github.io/mogo/',
+		github_url: 'https://github.com/bekhzodx64/mogo',
+		category: ['react'],
+		key_techs: ['HTML', 'CSS'],
+	},
+	{
+		name: 'Mogo',
+		description: 'This is my first project.',
+		image_path: '/images/mogo.png',
+		deployed_url: 'https://bekhzodx64.github.io/mogo/',
+		github_url: 'https://github.com/bekhzodx64/mogo',
+		category: ['django'],
+		key_techs: ['HTML', 'CSS'],
+	},
+	{
+		name: 'Mogo',
+		description: 'This is my first project.',
+		image_path: '/images/mogo.png',
+		deployed_url: 'https://bekhzodx64.github.io/mogo/',
+		github_url: 'https://github.com/bekhzodx64/mogo',
+		category: ['mongo'],
+		key_techs: ['HTML', 'CSS'],
+	},
+	{
+		name: 'Mogo',
+		description: 'This is my first project.',
+		image_path: '/images/mogo.png',
+		deployed_url: 'https://bekhzodx64.github.io/mogo/',
+		github_url: 'https://github.com/bekhzodx64/mogo',
+		category: ['react'],
+		key_techs: ['HTML', 'CSS'],
+	},
+	{
+		name: 'Mogo',
+		description: 'This is my first project.',
+		image_path: '/images/mogo.png',
+		deployed_url: 'https://bekhzodx64.github.io/mogo/',
+		github_url: 'https://github.com/bekhzodx64/mogo',
+		category: ['node'],
+		key_techs: ['HTML', 'CSS'],
+	},
+	{
+		name: 'Mogo',
+		description: 'This is my first project.',
+		image_path: '/images/mogo.png',
+		deployed_url: 'https://bekhzodx64.github.io/mogo/',
+		github_url: 'https://github.com/bekhzodx64/mogo',
+		category: ['mongo'],
+		key_techs: ['HTML', 'CSS'],
+	},
+];

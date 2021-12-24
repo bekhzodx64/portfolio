@@ -1,9 +1,40 @@
-const projects = () => {
-	return (
-		<div className="p-4">
-			projects page
-		</div>
-	)
-}
+import ProjectsNavbar from '../components/ProjectsNavbar';
+import { projects as projectsData } from '../data';
+import ProjectCard from './../components/ProjectCard';
+import { useState } from 'react';
+import { Category } from '../type';
 
-export default projects
+const Projects = () => {
+	const [projects, setProjects] = useState(projectsData);
+	const [active, setActive] = useState('all');
+
+	const handlerFilterCategory = (category: Category | 'all') => {
+		if (category === 'all') {
+			setProjects(projectsData);
+			setActive(category);
+			return;
+		}
+
+		const newArray = projectsData.filter((project) =>
+			project.category.includes(category)
+		);
+		setProjects(newArray);
+		setActive(category);
+	};
+
+	return (
+		<div className='px-5 py-2 h-[65vh] overflow-y-scroll'>
+			<ProjectsNavbar handlerFilterCategory={handlerFilterCategory} active={active} />
+
+			<div className='grid grid-cols-12 gap-4 my-3 relative'>
+				{projects.map((project) => (
+					<div className='col-span-12 sm:col-span-6 lg:col-span-4 p-2 bg-gray-200 dark:bg-dark-200 rounded-lg'>
+						<ProjectCard project={project} key={project.name} />
+					</div>
+				))}
+			</div>
+		</div>
+	);
+};
+
+export default Projects;

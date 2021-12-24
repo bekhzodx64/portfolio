@@ -17,9 +17,11 @@ const Sidebar = () => {
 			<Image
 				src='/avatar.jpg'
 				alt='User avatar'
-				className='w-32 h-32 rounded-full mx-auto select-none pointer-events-none'
-				width={200}
-				height={200}
+				className='rounded-full mx-auto select-none pointer-events-none'
+				width={128}
+				height={128}
+				layout='intrinsic'
+				quality={100}
 			/>
 			<h3 className='my-4 text-3xl font-medium tracking-wider font-kaushan'>
 				<span>#BekhzoD</span>

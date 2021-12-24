@@ -39,18 +39,6 @@ export const services: IService[] = [
 		about:
 			'I can build a beautiful and scalable SPA using <b> HTML </b>, <b>CSS</b> and <b>React.js</b>',
 	},
-	{
-		Icon: RiComputerLine,
-		title: 'Frontend Development',
-		about:
-			'I can build a beautiful and scalable SPA using <b> HTML </b>, <b>CSS</b> and <b>React.js</b>',
-	},
-	{
-		Icon: RiComputerLine,
-		title: 'Frontend Development',
-		about:
-			'I can build a beautiful and scalable SPA using <b> HTML </b>, <b>CSS</b> and <b>React.js</b>',
-	},
 ];
 
 export const languages: ISkill[] = [

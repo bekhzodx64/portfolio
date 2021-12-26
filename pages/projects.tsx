@@ -1,7 +1,7 @@
+import { useState } from 'react';
 import ProjectsNavbar from '../components/ProjectsNavbar';
 import { projects as projectsData } from '../data';
 import ProjectCard from './../components/ProjectCard';
-import { useState } from 'react';
 import { Category } from '../type';
 import { motion } from 'framer-motion';
 import { stagger, fadeInUp, routeAnimation } from '../animations';
@@ -9,16 +9,14 @@ import { stagger, fadeInUp, routeAnimation } from '../animations';
 const Projects = () => {
 	const [projects, setProjects] = useState(projectsData);
 	const [active, setActive] = useState('all');
-
-	const [showDetail, setShowDetail] = useState<number|null>(null);
-
+	const [showDetail, setShowDetail] = useState<number | null>(null);
+	
 	const handlerFilterCategory = (category: Category | 'all') => {
 		if (category === 'all') {
 			setProjects(projectsData);
 			setActive(category);
 			return;
 		}
-
 		const newArray = projectsData.filter((project) =>
 			project.category.includes(category)
 		);
@@ -28,7 +26,7 @@ const Projects = () => {
 
 	return (
 		<motion.div
-			className='px-5 py-2 h-[65vh] overflow-y-scroll'
+			className='px-5 py-2 h-[65vh] overflow-y-auto'
 			variants={routeAnimation}
 			initial='initial'
 			animate='animate'
@@ -37,9 +35,8 @@ const Projects = () => {
 				handlerFilterCategory={handlerFilterCategory}
 				active={active}
 			/>
-
 			<motion.div
-				className='grid grid-cols-12 gap-4 my-3 relative'
+				className='grid grid-cols-12 gap-4 mt-1 relative'
 				variants={stagger}
 				initial='initial'
 				animate='animate'>

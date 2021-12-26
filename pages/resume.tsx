@@ -2,6 +2,8 @@ import { languages, tools } from '../data';
 import Bar from './../components/Bar';
 import { motion } from 'framer-motion';
 import { fadeInUp, routeAnimation } from '../animations';
+import { AiOutlineLink } from 'react-icons/ai';
+import { FaUniversity } from 'react-icons/fa';
 
 const resume = () => {
 	return (
@@ -11,49 +13,58 @@ const resume = () => {
 			initial='initial'
 			animate='animate'
 			exit='exit'>
-			{/* education exp */}
 			<div className='grid md:grid-cols-2 gap-6'>
 				<motion.div variants={fadeInUp} initial='initial' animate='animate'>
-					<h5 className='my-3 text-2xl font-bold'>Education</h5>
+					<h5 className='my-3 text-2xl font-bold'>Образование</h5>
 					<div>
-						<h5 className='my-2 text-xl font-bold'>
-							Information and Communication Technology
+						<h5 className='my-2 text-xl font-bold flex items-center space-x-1'>
+							<FaUniversity />
+							<span>ТУИТ</span>
 						</h5>
-						<p className='font-semibold'>TPKIT</p>
+						<p className='font-semibold'>
+							Разработка практических программных средств
+						</p>
 						<p className='my-3'>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere,
-							assumenda?
+							Учусь в магистратуре в Ташкентском Университете Информационных
+							Технологий Имени Мухаммад Ал-Хоразмий.
 						</p>
 					</div>
 				</motion.div>
 				<motion.div variants={fadeInUp} initial='initial' animate='animate'>
-					<h5 className='my-3 text-2xl font-bold'>Experience</h5>
+					<h5 className='my-3 text-2xl font-bold'>Опыт работы</h5>
 					<div>
 						<h5 className='my-2 text-xl font-bold'>
-							Content Manager (5 months) - Front-end developer (9 months)
+							<a
+								href='https://220volt.uz/'
+								target='_blank'
+								className='items-center space-x-1 inline-flex'>
+								<AiOutlineLink />
+								<span>220volt.uz</span>
+							</a>
 						</h5>
-						<p className='font-semibold'>220volt.uz</p>
+						<p className='font-semibold'>Веб разработчик</p>
 						<p className='my-3'>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere,
-							assumenda?
+							Устроился на работу Контент менеджером, поработал в этой должности
+							5 месяцев а потом перевели на должность Веб разрботчика, вобывал
+							там 9 месяцев. Но в конце пришлось уволиться из за нехватки
+							времени на университет.
 						</p>
 					</div>
 				</motion.div>
 			</div>
 
-			{/* language tools */}
 			<div className='grid md:grid-cols-2 gap-6'>
 				<div>
-					<h5 className='my-3 text-2xl font-bold'>Languages & Framworks</h5>
-					<div className='my-2'>
+					<h5 className='mb-3 text-2xl font-bold'>Языки & Фреймворки</h5>
+					<div className='select-none pointer-events-none space-y-2'>
 						{languages.map((language) => (
 							<Bar data={language} key={language.name} />
 						))}
 					</div>
 				</div>
 				<div>
-					<h5 className='my-3 text-2xl font-bold'>Tools & Softwares</h5>
-					<div className='my-2'>
+					<h5 className='mb-3 text-2xl font-bold'>Программы & Инструменты</h5>
+					<div className='select-none pointer-events-none space-y-2'>
 						{tools.map((tool) => (
 							<Bar data={tool} key={tool.name} />
 						))}

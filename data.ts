@@ -1,24 +1,23 @@
 import { IService, ISkill, IProject } from './type';
-import { AiFillHtml5 } from 'react-icons/Ai';
-import { MdWeb } from 'react-icons/Md';
-import { CgDatabase } from 'react-icons/Cg';
+import { AiOutlineHtml5 } from 'react-icons/ai';
+import { FaReact, FaNodeJs } from 'react-icons/fa';
 import { BsCircleFill } from 'react-icons/bs';
 
 export const services: IService[] = [
 	{
-		Icon: AiFillHtml5,
+		Icon: AiOutlineHtml5,
 		title: 'Верстка',
 		about:
 			'Верстка лендинг страниц за короткие сроки используя <b>HTML</b>, <b>CSS</b> и <b>JavaScript</b>.',
 	},
 	{
-		Icon: MdWeb,
+		Icon: FaReact,
 		title: 'Front-End',
 		about:
 			'Могу создать веб приложении с красивым интерфейсом используя <b>HTML</b>, <b>CSS</b> и <b>React.js</b>',
 	},
 	{
-		Icon: CgDatabase,
+		Icon: FaNodeJs,
 		title: 'Back-End',
 		about:
 			'В данный момент изучаю <b>Node.js</b>, <b>MongoDB</b> и <b>MySQL</b>.  ',

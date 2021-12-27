@@ -29,7 +29,7 @@ const Navbar = () => {
 	}, []);
 
 	return (
-		<div className='flex justify-between items-center px-5 py-3 my-3'>
+		<div className='flex justify-between items-center mb-4'>
 			<span className='font-bold text-green text-xl border-b-4 border-green md:text-2xl select-none pointer-events-none'>
 				{activeItem}
 			</span>

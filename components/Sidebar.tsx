@@ -4,6 +4,7 @@ import { BsTelegram } from 'react-icons/bs';
 import { GoLocation } from 'react-icons/go';
 import { GiTie } from 'react-icons/gi';
 import { useTheme } from 'next-themes';
+import { Fragment } from 'react';
 
 const Sidebar = () => {
 	const { theme, setTheme } = useTheme();
@@ -12,7 +13,7 @@ const Sidebar = () => {
 	};
 
 	return (
-		<div>
+		<Fragment>
 			<div className='relative inline-block select-none pointer-events-none'>
 				<Image
 					src='/avatar.png'
@@ -52,7 +53,7 @@ const Sidebar = () => {
 					<AiFillGithub className='w-8 h-8' />
 				</a>
 			</div>
-			<div className='my-5 py-4 bg-slate-200 dark:bg-dark-200 -mx-3 space-y-2'>
+			<div className='my-5 py-4 bg-slate-200 dark:bg-dark-200 -mx-7 space-y-2'>
 				<div className='flex items-center justify-center space-x-2'>
 					<GoLocation />
 					<span>Узбекистан, Ташкент</span>
@@ -66,16 +67,16 @@ const Sidebar = () => {
 			</div>
 
 			<button
-				className='bg-gradient-to-r from-green to-blue-400 w-8/12 rounded-full py-2 px-5 text-white my-2 outline-none select-none'
+				className='bg-gradient-to-r from-green to-blue-400 w-8/12 rounded-full py-2 px-4 text-white my-2 outline-none select-none'
 				onClick={() => window.open('https://t.me/bekhzodx64')}>
 				Связяться
 			</button>
 			<button
-				className='bg-gradient-to-r from-green to-blue-400 w-8/12 rounded-full py-2 px-5 text-white my-2 outline-none select-none'
+				className='bg-gradient-to-r from-green to-blue-400 w-8/12 rounded-full py-2 px-4 text-white my-2 outline-none select-none'
 				onClick={changeTheme}>
 				Сменить тему
 			</button>
-		</div>
+		</Fragment>
 	);
 };
 

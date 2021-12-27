@@ -19,6 +19,13 @@ module.exports = {
 					700: '#202125',
 				},
 			},
+			container: {
+				center: true,
+				padding: 20,
+			},
+			screens: {
+				'2xl': 'none',
+			}
 		},
 	},
 	variants: {},

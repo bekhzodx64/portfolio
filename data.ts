@@ -14,7 +14,7 @@ export const services: IService[] = [
 		Icon: FaReact,
 		title: 'Front-End',
 		about:
-			'Могу создать веб приложении с красивым интерфейсом используя <b>HTML</b>, <b>CSS</b> и <b>React.js</b>',
+			'Создание веб приложении с красивым интерфейсом используя <b>HTML</b>, <b>CSS</b> и <b>React.js</b>',
 	},
 	{
 		Icon: FaNodeJs,

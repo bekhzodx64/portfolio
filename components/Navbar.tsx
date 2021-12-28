@@ -10,8 +10,8 @@ const NavItem: FunctionComponent<{
 }> = ({ activeItem, name, route, setActiveItem }) => {
 	return activeItem !== name ? (
 		<Link href={route}>
-			<a>
-				<span onClick={() => setActiveItem(name)} className='hover:text-green transition'>{name}</span>
+			<a onClick={() => setActiveItem(name)} className='hover:text-green transition'>
+				{name}
 			</a>
 		</Link>
 	) : null;
@@ -29,11 +29,11 @@ const Navbar = () => {
 	}, []);
 
 	return (
-		<div className='flex justify-between items-center mb-4'>
+		<div className='flex justify-between items-center mb-6'>
 			<span className='font-bold text-green text-xl border-b-4 border-green md:text-2xl select-none pointer-events-none'>
 				{activeItem}
 			</span>
-			<div className='text-lg flex space-x-5 select-none'>
+			<div className='text-lg flex space-x-5 select-none print:hidden'>
 				<NavItem
 					activeItem={activeItem}
 					setActiveItem={setActiveItem}

@@ -26,7 +26,7 @@ const Projects = () => {
 
 	return (
 		<motion.div
-			className='px-5 py-2 h-[65vh] overflow-y-auto'
+			className='px-5 py-2 overflow-y-auto'
 			variants={routeAnimation}
 			initial='initial'
 			animate='animate'
@@ -36,16 +36,20 @@ const Projects = () => {
 				active={active}
 			/>
 			<motion.div
-				className='grid grid-cols-12 gap-4 mt-1 relative'
+				className='grid grid-cols-3 gap-5 mt-1 relative'
 				variants={stagger}
 				initial='initial'
 				animate='animate'>
 				{projects.map((project) => (
 					<motion.div
-						className='col-span-12 sm:col-span-6 lg:col-span-4 p-2 bg-gray-200 dark:bg-dark-200 rounded-lg'
+						className='p-2 bg-gray-200 dark:bg-dark-200 rounded-lg'
 						variants={fadeInUp}
 						key={project.name}>
-						<ProjectCard project={project} showDetail={showDetail} setShowDetail={setShowDetail}/>
+						<ProjectCard
+							project={project}
+							showDetail={showDetail}
+							setShowDetail={setShowDetail}
+						/>
 					</motion.div>
 				))}
 			</motion.div>

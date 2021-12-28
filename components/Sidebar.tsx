@@ -14,7 +14,7 @@ const Sidebar = () => {
 
 	return (
 		<Fragment>
-			<div className='relative inline-block select-none pointer-events-none'>
+			<div className='relative inline-block select-none pointer-events-none print:hidden'>
 				<Image
 					src='/avatar.png'
 					alt='User Avatar'
@@ -36,11 +36,11 @@ const Sidebar = () => {
 				Веб разработчик
 			</p>
 			<a
-				className='px-2 py-1 my-3 bg-slate-200 dark:bg-dark-200 rounded-full flex items-center justify-center select-none cursor-not-allowed'>
+				className='px-2 py-1 my-3 bg-slate-200 dark:bg-dark-200 rounded-full flex items-center justify-center select-none cursor-not-allowed print:hidden'>
 				<GiTie className='w-6 h-6' />
 				Скачать CV
 			</a>
-			<div className='flex justify-around my-5 text-green w-9/12 md:w-full mx-auto'>
+			<div className='flex justify-around my-5 text-green w-9/12 md:w-full mx-auto print:hidden'>
 				<a className='cursor-not-allowed'>
 					<AiFillYoutube className='w-8 h-8' />
 				</a>
@@ -67,7 +67,7 @@ const Sidebar = () => {
 					</a>
 				</div>
 			</div>
-			<div className='md:flex md:gap-x-10 lg:flex-col lg:items-center'>
+			<div className='md:flex md:gap-x-10 lg:flex-col lg:items-center print:hidden'>
 				<button
 					className='bg-gradient-to-r from-green to-blue-400 w-8/12 rounded-full py-2 px-4 text-white my-2 outline-none select-none'
 					onClick={() => window.open('https://t.me/bekhzodx64')}>

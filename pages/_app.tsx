@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps, router }) {
 					<div className='bg-white dark:bg-dark-100 rounded-2xl py-5 px-7 text-center drop-shadow-2xl ring-8 ring-opacity-50 ring-white dark:ring-dark-200'>
 						<Sidebar />
 					</div>
-					<div className='bg-white dark:bg-dark-100 rounded-2xl pt-6 px-6 drop-shadow-2xl ring-8 ring-opacity-50 ring-white dark:ring-dark-200 overflow-hidden'>
+					<div className='bg-white dark:bg-dark-100 rounded-2xl pt-6 px-6 drop-shadow-2xl ring-8 ring-opacity-50 ring-white dark:ring-dark-200 overflow-hidden w-full'>
 						<Navbar />
 						<AnimatePresence exitBeforeEnter>
 							<Component {...pageProps} key={router.route} />

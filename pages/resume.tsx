@@ -54,7 +54,7 @@ const resume = () => {
 
 			<div className='grid md:grid-cols-2 gap-6 pb-6'>
 				<div>
-					<h5 className='mb-3 text-2xl font-bold'>Языки & Фреймворки</h5>
+					<h5 className='mb-3 xl:text-2xl font-bold text-[22px]'>Языки & Фреймворки</h5>
 					<div className='select-none pointer-events-none space-y-2'>
 						{languages.map((language) => (
 							<Bar data={language} key={language.name} />
@@ -62,7 +62,7 @@ const resume = () => {
 					</div>
 				</div>
 				<div>
-					<h5 className='mb-3 text-2xl font-bold'>Программы & Инструменты</h5>
+					<h5 className='mb-3 xl:text-2xl font-bold text-[22px]'>Программы & Инструменты</h5>
 					<div className='select-none pointer-events-none space-y-2'>
 						{tools.map((tool) => (
 							<Bar data={tool} key={tool.name} />

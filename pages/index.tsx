@@ -37,8 +37,8 @@ const About = ({ endpoint }) => {
 							<ServiceCard service={service} />
 						</motion.div>
 					))}
-					<div className='border-4 border-white border-dashed border-opacity-80 dark:border-dark-100 ring-opacity-60 rounded-xl flex items-center justify-center print:hidden'>
-						<AiOutlineAppstoreAdd className='w-9 h-9 text-slate-400 dark:text-dark-100 opacity-70 dark:opacity-100'/>
+					<div className='border-4 border-white border-dashed border-opacity-80 h-24 md:h-[88px] dark:border-dark-100 ring-opacity-60 rounded-xl flex items-center justify-center print:hidden'>
+						<AiOutlineAppstoreAdd className='w-9 h-9 text-slate-400 dark:text-dark-100 opacity-70 dark:opacity-100' />
 					</div>
 				</motion.div>
 			</div>

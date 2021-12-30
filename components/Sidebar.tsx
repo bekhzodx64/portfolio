@@ -28,11 +28,11 @@ const Sidebar = () => {
 					<div className='w-4 h-4 rounded-full bg-green animate-ping'></div>
 				</div>
 			</div>
-			<h3 className='my-4 text-3xl font-medium tracking-wider font-kaushan select-none pointer-events-none relative'>
+			<h3 className='my-4 text-3xl font-medium tracking-wider font-kaushan select-none pointer-events-none relative print:my-0'>
 				<span>#Bekhzod</span>
 				<span>_x64</span>
 			</h3>
-			<p className='px-2 py-1 my-3 bg-slate-200 dark:bg-dark-200 rounded-full select-none pointer-events-none'>
+			<p className='px-2 py-1 my-3 bg-slate-200 dark:bg-dark-200 rounded-full select-none pointer-events-none print:my-2'>
 				Веб разработчик
 			</p>
 			<a
@@ -51,7 +51,7 @@ const Sidebar = () => {
 					<AiFillGithub className='w-8 h-8' />
 				</a>
 			</div>
-			<div className='my-5 py-4 bg-slate-200 dark:bg-dark-200 -mx-7 space-y-2'>
+			<div className='my-5 py-4 bg-slate-200 dark:bg-dark-200 -mx-7 space-y-2 print:my-2 print:py-0'>
 				<div className='flex items-center justify-center space-x-2'>
 					<GoLocation />
 					<span>Узбекистан, Ташкент</span>

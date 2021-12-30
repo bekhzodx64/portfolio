@@ -1,5 +1,6 @@
 import { FunctionComponent, useState } from 'react';
-import { AiFillGithub, AiFillProject } from 'react-icons/ai';
+import { AiFillGithub } from 'react-icons/ai';
+import { CgWebsite } from 'react-icons/cg';
 import { MdClose } from 'react-icons/md';
 import { IProject } from './../type';
 import Image from 'next/image';
@@ -57,13 +58,15 @@ const ProjectCard: FunctionComponent<{
 							variants={fadeInUp}>
 							<a
 								href={github_url}
-								className='flex items-center px-4 py-2 space-x-3 text-lg bg-gray-200 dark:bg-dark-200 select-none'>
+								target='_blank'
+								className='flex items-center px-4 py-2 space-x-3 text-lg bg-slate-100 dark:bg-dark-200 select-none rounded-lg drop-shadow'>
 								<AiFillGithub /> <span>Github</span>
 							</a>
 							<a
 								href={deployed_url}
-								className='flex items-center px-4 py-2 space-x-3 text-lg bg-gray-200 dark:bg-dark-200 select-none'>
-								<AiFillProject /> <span>Project</span>
+								target='_blank'
+								className='flex items-center px-4 py-2 space-x-3 text-lg bg-slate-100 dark:bg-dark-200 select-none rounded-lg drop-shadow'>
+								<CgWebsite /> <span>Демо</span>
 							</a>
 						</motion.div>
 					</motion.div>

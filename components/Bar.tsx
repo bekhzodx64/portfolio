@@ -23,14 +23,14 @@ const Bar: FunctionComponent<{
 	};
 
 	return (
-		<div className='text-white bg-slate-300 dark:bg-dark-200 rounded-full'>
+		<div className='text-white bg-slate-300 dark:bg-dark-200 rounded-full print:bg-white'>
 			<motion.div
-				className='px-2 py-1 flex items-center rounded-full bg-gradient-to-r from-green to-blue-600'
+				className='px-2 py-1 flex items-center rounded-full bg-gradient-to-r from-green to-blue-600 print:text-dark-200'
 				style={{ width: bar_width }}
 				variants={variants}
 				initial='initial'
 				animate='animate'>
-				<Icon className='mr-2' />
+				<Icon className='mr-2 print:hidden' />
 				{name}
 			</motion.div>
 		</div>

@@ -31,13 +31,13 @@ const Projects = () => {
 				active={active}
 			/>
 			<motion.div
-				className='overflow-y-auto max-h-[60vh]'
+				className='overflow-y-auto h-96 md:h-[360px] lg:h-[445px] pr-5 mb-6 lg:mb-0'
 				variants={routeAnimation}
 				initial='initial'
 				animate='animate'
 				exit='exit'>
 				<motion.div
-					className='grid grid-cols-3 gap-5 mt-1 relative'
+					className='grid sm:grid-cols-2 md:grid-cols-3 gap-5 mt-1 relative'
 					variants={stagger}
 					initial='initial'
 					animate='animate'>

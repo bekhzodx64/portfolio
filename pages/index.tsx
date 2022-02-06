@@ -3,7 +3,7 @@ import { services } from '../data';
 import { motion } from 'framer-motion';
 import { fadeInUp, stagger, routeAnimation } from './../animations';
 import { AiOutlineAppstoreAdd } from 'react-icons/ai';
-// import { GetServerSideProps, GetServerSidePropsContext } from 'next';
+import { GetServerSideProps, GetServerSidePropsContext } from 'next';
 
 const About = ({ endpoint }) => {
 	return (
@@ -34,12 +34,10 @@ const About = ({ endpoint }) => {
 	);
 };
 
-// export const getServerSideProps: GetServerSideProps = async (
-// 	context: GetServerSidePropsContext
-// ) => {
-// 	const res = await fetch(`${process.env.VERCEL_URL}/api/services`);
-// 	const data = await res.json();
-// 	return { props: { endpoint: process.env.VERCEL_URL } };
-// };
+export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
+	// const res = await fetch(`${process.env.VERCEL_URL}/api/services`);
+	// const data = await res.json();
+	return { props: { endpoint: process.env.VERCEL_URL } };
+};
 
 export default About;

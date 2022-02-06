@@ -20,23 +20,26 @@ const Sidebar = () => {
 					<div className='bg-green h-4 w-4 animate-ping rounded-full'></div>
 				</div>
 			</div>
-			<h3 className='font-kaushan pointer-events-none relative my-4 select-none text-3xl font-medium tracking-wider print:my-0'>
+			<h1 className='font-kaushan pointer-events-none relative my-4 select-none text-3xl font-medium tracking-wider print:my-0'>
 				<span>#Bekhzod</span>
 				<span>_x64</span>
-			</h3>
+			</h1>
 			<p className='dark:bg-dark-200 pointer-events-none my-3 select-none rounded-full bg-slate-200 px-2 py-1 print:my-2'>Веб разработчик</p>
-			<a className='dark:bg-dark-200 my-3 flex cursor-not-allowed select-none items-center justify-center rounded-full bg-slate-200 px-2 py-1 print:hidden'>
+			<a
+				href='#'
+				className='dark:bg-dark-200 my-3 flex cursor-not-allowed select-none items-center justify-center rounded-full bg-slate-200 px-2 py-1 print:hidden'
+				aria-label='Скачать CV'>
 				<GiTie className='h-6 w-6' />
 				Скачать CV
 			</a>
 			<div className='text-green mx-auto my-5 flex w-9/12 justify-around print:hidden md:w-full'>
-				<a className='cursor-not-allowed'>
+				<a href='#' className='cursor-not-allowed' aria-label='YouTube'>
 					<AiFillYoutube className='h-8 w-8' />
 				</a>
-				<a href='https://t.me/bekhzodx64' target='_blank' rel='noreferrer'>
+				<a href='https://t.me/bekhzodx64' target='_blank' rel='noreferrer' aria-label='Telegram'>
 					<BsTelegram className='h-8 w-8' />
 				</a>
-				<a className='cursor-not-allowed'>
+				<a href='#' className='cursor-not-allowed' aria-label='GitHub'>
 					<AiFillGithub className='h-8 w-8' />
 				</a>
 			</div>

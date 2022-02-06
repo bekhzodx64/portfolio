@@ -4,10 +4,14 @@ import { motion } from 'framer-motion';
 import { fadeInUp, routeAnimation } from '../animations';
 import { AiOutlineLink } from 'react-icons/ai';
 import { FaUniversity } from 'react-icons/fa';
+import Head from 'next/head';
 
 const resume = () => {
 	return (
 		<motion.div variants={routeAnimation} initial='initial' animate='animate' exit='exit'>
+			<Head>
+				<title>Веб разработчик | Резюме</title>
+			</Head>
 			<div className='grid gap-6 lg:grid-cols-2'>
 				<motion.div variants={fadeInUp} initial='initial' animate='animate'>
 					<h5 className='my-3 text-2xl font-bold'>Образование</h5>

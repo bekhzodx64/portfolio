@@ -5,6 +5,7 @@ import ProjectCard from './../components/ProjectCard';
 import { Category } from '../type';
 import { motion } from 'framer-motion';
 import { stagger, fadeInUp, routeAnimation } from '../animations';
+import Head from 'next/head';
 
 const Projects = () => {
 	const [projects, setProjects] = useState(projectsData);
@@ -24,6 +25,9 @@ const Projects = () => {
 
 	return (
 		<Fragment>
+			<Head>
+				<title>Веб разработчик | Проекты</title>
+			</Head>
 			<ProjectsNavbar handlerFilterCategory={handlerFilterCategory} active={active} />
 			<motion.div
 				className='mb-6 h-96 overflow-y-auto pr-5 md:h-[360px] lg:mb-0 lg:h-[445px]'

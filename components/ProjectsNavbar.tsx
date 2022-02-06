@@ -22,12 +22,12 @@ const ProjectsNavbar: FunctionComponent<{
 	active: string;
 }> = (props) => {
 	return (
-		<div className='mb-5 flex list-none space-x-3 overflow-x-auto'>
+		<ul className='mb-5 flex list-none space-x-3 overflow-x-auto'>
 			<NavItem value='Все' {...props} />
 			<NavItem value='html' {...props} />
 			<NavItem value='react' {...props} />
 			<NavItem value='node' {...props} />
-		</div>
+		</ul>
 	);
 };
 

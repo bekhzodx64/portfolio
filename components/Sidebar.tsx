@@ -14,44 +14,33 @@ const Sidebar = () => {
 
 	return (
 		<Fragment>
-			<div className='relative inline-block select-none pointer-events-none print:hidden'>
-				<Image
-					src='/avatar.png'
-					alt='User Avatar'
-					className='rounded-full mx-auto'
-					width={128}
-					height={128}
-					layout='intrinsic'
-					quality={100}
-				/>
-				<div className='absolute w-4 h-4 rounded-full bg-green bottom-[15px] right-[15px] '>
-					<div className='w-4 h-4 rounded-full bg-green animate-ping'></div>
+			<div className='pointer-events-none relative inline-block select-none print:hidden'>
+				<Image src='/avatar.png' alt='User Avatar' className='mx-auto rounded-full' width={128} height={128} layout='intrinsic' quality={100} />
+				<div className='bg-green absolute bottom-[15px] right-[15px] h-4 w-4 rounded-full '>
+					<div className='bg-green h-4 w-4 animate-ping rounded-full'></div>
 				</div>
 			</div>
-			<h3 className='my-4 text-3xl font-medium tracking-wider font-kaushan select-none pointer-events-none relative print:my-0'>
+			<h3 className='font-kaushan pointer-events-none relative my-4 select-none text-3xl font-medium tracking-wider print:my-0'>
 				<span>#Bekhzod</span>
 				<span>_x64</span>
 			</h3>
-			<p className='px-2 py-1 my-3 bg-slate-200 dark:bg-dark-200 rounded-full select-none pointer-events-none print:my-2'>
-				Веб разработчик
-			</p>
-			<a
-				className='px-2 py-1 my-3 bg-slate-200 dark:bg-dark-200 rounded-full flex items-center justify-center select-none cursor-not-allowed print:hidden'>
-				<GiTie className='w-6 h-6' />
+			<p className='dark:bg-dark-200 pointer-events-none my-3 select-none rounded-full bg-slate-200 px-2 py-1 print:my-2'>Веб разработчик</p>
+			<a className='dark:bg-dark-200 my-3 flex cursor-not-allowed select-none items-center justify-center rounded-full bg-slate-200 px-2 py-1 print:hidden'>
+				<GiTie className='h-6 w-6' />
 				Скачать CV
 			</a>
-			<div className='flex justify-around my-5 text-green w-9/12 md:w-full mx-auto print:hidden'>
+			<div className='text-green mx-auto my-5 flex w-9/12 justify-around print:hidden md:w-full'>
 				<a className='cursor-not-allowed'>
-					<AiFillYoutube className='w-8 h-8' />
+					<AiFillYoutube className='h-8 w-8' />
 				</a>
-				<a href='https://t.me/bekhzodx64' target='_blank'>
-					<BsTelegram className='w-8 h-8' />
+				<a href='https://t.me/bekhzodx64' target='_blank' rel='noreferrer'>
+					<BsTelegram className='h-8 w-8' />
 				</a>
 				<a className='cursor-not-allowed'>
-					<AiFillGithub className='w-8 h-8' />
+					<AiFillGithub className='h-8 w-8' />
 				</a>
 			</div>
-			<div className='my-5 py-4 bg-slate-200 dark:bg-dark-200 -mx-7 space-y-2 print:my-2 print:py-0'>
+			<div className='dark:bg-dark-200 my-5 -mx-7 space-y-2 bg-slate-200 py-4 print:my-2 print:py-0'>
 				<div className='flex items-center justify-center space-x-2'>
 					<GoLocation />
 					<span>Узбекистан, Ташкент</span>
@@ -67,14 +56,14 @@ const Sidebar = () => {
 					</a>
 				</div>
 			</div>
-			<div className='md:flex md:gap-x-10 lg:flex-col lg:items-center print:hidden'>
+			<div className='print:hidden md:flex md:gap-x-10 lg:flex-col lg:items-center'>
 				<button
-					className='bg-gradient-to-r from-green to-blue-400 w-8/12 rounded-full py-2 px-4 text-white my-2 outline-none select-none'
+					className='from-green my-2 w-8/12 select-none rounded-full bg-gradient-to-r to-blue-400 px-4 py-2 text-white outline-none'
 					onClick={() => window.open('https://t.me/bekhzodx64')}>
 					Связяться
 				</button>
 				<button
-					className='bg-gradient-to-r from-green to-blue-400 w-8/12 rounded-full py-2 px-4 text-white my-2 outline-none select-none'
+					className='from-green my-2 w-8/12 select-none rounded-full bg-gradient-to-r to-blue-400 px-4 py-2 text-white outline-none'
 					onClick={changeTheme}>
 					Сменить тему
 				</button>

@@ -23,9 +23,9 @@ const Bar: FunctionComponent<{
 	};
 
 	return (
-		<div className='text-white bg-slate-300 dark:bg-dark-200 rounded-full print:bg-white'>
+		<div className='dark:bg-dark-200 rounded-full bg-slate-300 text-white print:bg-white'>
 			<motion.div
-				className='px-2 py-1 flex items-center rounded-full bg-gradient-to-r from-green to-blue-600 print:text-dark-200'
+				className='from-green print:text-dark-200 flex items-center rounded-full bg-gradient-to-r to-blue-600 px-2 py-1'
 				style={{ width: bar_width }}
 				variants={variants}
 				initial='initial'

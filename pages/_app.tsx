@@ -7,12 +7,12 @@ import '../styles/globals.css';
 function MyApp({ Component, pageProps, router }) {
 	return (
 		<ThemeProvider attribute='class'>
-			<div className='flex flex-col min-h-screen py-5 overflow-x-hidden print:py-0'>
-				<div className='container flex flex-col lg:flex-row gap-y-8 md:gap-x-8 my-auto print:gap-y-0'>
-					<div className='bg-white dark:bg-dark-100 rounded-2xl py-5 px-7 text-center drop-shadow-2xl ring-8 ring-opacity-50 ring-white dark:ring-dark-200 print:drop-shadow-none print:pt-2 print:pb-0'>
+			<div className='flex min-h-screen flex-col overflow-x-hidden py-5 print:py-0'>
+				<div className='container my-auto flex flex-col gap-y-8 print:gap-y-0 md:gap-x-8 lg:flex-row'>
+					<div className='dark:bg-dark-100 dark:ring-dark-200 rounded-2xl bg-white py-5 px-7 text-center ring-8 ring-white ring-opacity-50 drop-shadow-2xl print:pt-2 print:pb-0 print:drop-shadow-none'>
 						<Sidebar />
 					</div>
-					<div className='bg-white dark:bg-dark-100 rounded-2xl pt-6 px-6 drop-shadow-2xl ring-8 ring-opacity-50 ring-white dark:ring-dark-200 overflow-hidden w-full print:ring-0 print:drop-shadow-none'>
+					<div className='dark:bg-dark-100 dark:ring-dark-200 w-full overflow-hidden rounded-2xl bg-white px-6 pt-6 ring-8 ring-white ring-opacity-50 drop-shadow-2xl print:ring-0 print:drop-shadow-none'>
 						<Navbar />
 						<AnimatePresence exitBeforeEnter>
 							<Component {...pageProps} key={router.route} />

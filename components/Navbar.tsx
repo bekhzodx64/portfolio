@@ -29,29 +29,14 @@ const Navbar = () => {
 	}, []);
 
 	return (
-		<div className='flex justify-between items-center mb-6'>
-			<span className='font-bold text-green text-lg sm:text-xl border-b-4 border-green md:text-2xl select-none pointer-events-none'>
+		<div className='mb-6 flex items-center justify-between'>
+			<span className='text-green border-green pointer-events-none select-none border-b-4 text-lg font-bold sm:text-xl md:text-2xl'>
 				{activeItem}
 			</span>
-			<div className='text-base sm:text-lg flex space-x-5 select-none print:hidden'>
-				<NavItem
-					activeItem={activeItem}
-					setActiveItem={setActiveItem}
-					name='Обо мне'
-					route='/'
-				/>
-				<NavItem
-					activeItem={activeItem}
-					setActiveItem={setActiveItem}
-					name='Проекты'
-					route='/projects'
-				/>
-				<NavItem
-					activeItem={activeItem}
-					setActiveItem={setActiveItem}
-					name='Резюме'
-					route='/resume'
-				/>
+			<div className='flex select-none space-x-5 text-base print:hidden sm:text-lg'>
+				<NavItem activeItem={activeItem} setActiveItem={setActiveItem} name='Обо мне' route='/' />
+				<NavItem activeItem={activeItem} setActiveItem={setActiveItem} name='Проекты' route='/projects' />
+				<NavItem activeItem={activeItem} setActiveItem={setActiveItem} name='Резюме' route='/resume' />
 			</div>
 		</div>
 	);

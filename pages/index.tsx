@@ -2,20 +2,26 @@ import ServiceCard from './../components/ServiceCard';
 import { services } from '../data';
 import { motion } from 'framer-motion';
 import { fadeInUp, stagger, routeAnimation } from './../animations';
-import { AiOutlineAppstoreAdd } from 'react-icons/ai';
 import { GetServerSideProps, GetServerSidePropsContext } from 'next';
 import Head from 'next/head';
 
 const About = ({ endpoint }) => {
 	return (
-		<motion.div className='flex h-full flex-col' variants={routeAnimation} initial='initial' animate='animate' exit='exit'>
+		<motion.div
+			className='flex h-full flex-col'
+			variants={routeAnimation}
+			initial='initial'
+			animate='animate'
+			exit='exit'>
 			<Head>
 				<title>Веб разработчик | Главная</title>
 			</Head>
 			<h2 className='mb-5 text-justify font-medium'>
-				Всем привет ! Меня зовут Бекзод и я занимаюсь веб разработкой. На этом сайте вы можете узнать инфу обо мне, посмотреть какие проекты были
-				сделаны мною а так же на что я способен в сфере веб разработки. К сожалению в раздел Проекты попали не все мои работы, а лишь те которые я
-				посчитал достойными для показа. Есть вопросы ? Свяжитесь прямо сейчас.
+				Всем привет ! Меня зовут Бекзод и я занимаюсь веб разработкой. На этом сайте вы
+				сможете узнать инфу обо мне, посмотреть какие проекты были сделаны мною а так же
+				на что я способен в сфере веб разработки. К сожалению в раздел Проекты попали не
+				все мои работы, а лишь те которые я посчитал достойными для показа. Есть вопросы ?
+				Свяжитесь прямо сейчас.
 			</h2>
 			<div className='dark:bg-dark-200 -mx-6 flex-1 bg-slate-200 p-6'>
 				<h2 className='mb-10 text-xl font-bold tracking-wide'>Что я предлагаю</h2>
@@ -25,20 +31,22 @@ const About = ({ endpoint }) => {
 					initial='initial'
 					animate='animate'>
 					{services.map((service) => (
-						<motion.div variants={fadeInUp} className='dark:bg-dark-100 rounded-xl bg-white drop-shadow' key={service.title}>
+						<motion.div
+							variants={fadeInUp}
+							className='dark:bg-dark-100 rounded-xl bg-white shadow'
+							key={service.title}>
 							<ServiceCard service={service} />
 						</motion.div>
 					))}
-					<div className='dark:border-dark-100 flex h-24 items-center justify-center rounded-xl border-4 border-dashed border-white border-opacity-80 ring-opacity-60 print:hidden md:h-[88px]'>
-						<AiOutlineAppstoreAdd className='dark:text-dark-100 h-9 w-9 text-slate-400 opacity-70 dark:opacity-100' />
-					</div>
 				</motion.div>
 			</div>
 		</motion.div>
 	);
 };
 
-export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
+export const getServerSideProps: GetServerSideProps = async (
+	context: GetServerSidePropsContext
+) => {
 	// const res = await fetch(`${process.env.VERCEL_URL}/api/services`);
 	// const data = await res.json();
 	return { props: { endpoint: process.env.VERCEL_URL } };

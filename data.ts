@@ -8,19 +8,23 @@ export const services: IService[] = [
 		Icon: AiOutlineHtml5,
 		title: 'Верстка',
 		about:
-			'Верстка лендинг страниц за короткие сроки используя <b>HTML</b>, <b>CSS</b> и <b>JavaScript</b>.',
+			'Верстка страниц за короткие сроки используя <b>HTML</b>, <b>CSS</b> и <b>JavaScript</b>.',
 	},
 	{
 		Icon: FaReact,
 		title: 'Front-End',
 		about:
-			'Создание веб приложении с красивым интерфейсом используя <b>HTML</b>, <b>CSS</b> и <b>React.js</b>',
+			'Создание веб приложении с красивым интерфейсом используя <b>React.js</b> и <b>Next.js</b>.',
 	},
 	{
 		Icon: FaNodeJs,
 		title: 'Back-End',
-		about:
-			'В данный момент изучаю <b>Node.js</b>, <b>MongoDB</b> и <b>MySQL</b>.  ',
+		about: 'В процессе <b>Node.js</b> и <b>MongoDB</b>.',
+	},
+	{
+		Icon: FaReact,
+		title: 'React Native',
+		about: 'Скоро...',
 	},
 ];
 

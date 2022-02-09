@@ -21,22 +21,30 @@ const resume = () => {
 							<span>ТУИТ</span>
 						</h5>
 						<p className='font-semibold'>Разработка практических программных средств</p>
-						<p className='my-3'>Учусь в магистратуре в Ташкентском Университете Информационных Технологий Имени Мухаммад Ал-Хоразмий.</p>
+						<p className='my-3'>
+							Учусь в магистратуре в Ташкентском Университете Информационных Технологий
+							Имени Мухаммад Ал-Хоразмий.
+						</p>
 					</div>
 				</motion.div>
 				<motion.div variants={fadeInUp} initial='initial' animate='animate'>
 					<h5 className='my-3 text-2xl font-bold'>Опыт работы</h5>
 					<div>
 						<h5 className='my-2 text-xl font-bold'>
-							<a href='https://220volt.uz/' target='_blank' rel='noreferrer' className='inline-flex items-center space-x-1'>
+							<a
+								href='https://220volt.uz/'
+								target='_blank'
+								rel='noreferrer'
+								className='inline-flex items-center space-x-1'>
 								<AiOutlineLink />
 								<span>220volt.uz</span>
 							</a>
 						</h5>
 						<p className='font-semibold'>Веб разработчик</p>
 						<p className='my-3'>
-							Устроился на работу Контент менеджером, поработал в этой должности 5 месяцев а потом перевели на должность Веб разрботчика, вобывал там
-							9 месяцев. Но в конце пришлось уволиться из за нехватки времени на университет.
+							Устроился на работу Контент менеджером, поработал в этой должности 5 месяцев
+							а потом на должности Веб разрботчика 9 месяцев. Но в конце пришлось
+							уволиться из за нехватки времени на учебу.
 						</p>
 					</div>
 				</motion.div>
@@ -52,7 +60,9 @@ const resume = () => {
 					</div>
 				</div>
 				<div>
-					<h5 className='mb-3 text-[22px] font-bold xl:text-2xl'>Программы & Инструменты</h5>
+					<h5 className='mb-3 text-[22px] font-bold xl:text-2xl'>
+						Программы & Инструменты
+					</h5>
 					<div className='pointer-events-none select-none space-y-2 print:flex print:items-center print:space-y-0'>
 						{tools.map((tool) => (
 							<Bar data={tool} key={tool.name} />

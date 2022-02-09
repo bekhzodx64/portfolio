@@ -36,7 +36,7 @@ const ProjectCard: FunctionComponent<{
 				height='170'
 				layout='responsive'
 			/>
-			<p className='my-2 text-center'>{name}</p>
+			<p className='my-2 text-center font-semibold'>{name}</p>
 
 			{showDetail === id && (
 				<div className='dark:bg-dark-200 fixed right-0 top-0 left-0 bottom-0 z-10 flex items-center justify-center bg-white sm:p-0 md:bg-opacity-50 md:p-6 md:backdrop-blur-sm md:dark:bg-opacity-50 md:dark:backdrop-blur-sm'>
@@ -67,7 +67,7 @@ const ProjectCard: FunctionComponent<{
 									target='_blank'
 									rel='noreferrer'
 									className='dark:bg-dark-200 flex select-none items-center space-x-3 rounded-lg bg-slate-100 px-4 py-2 text-lg shadow'>
-									<CgWebsite /> <span>Демо</span>
+									<CgWebsite /> <span>Посетить</span>
 								</a>
 							</motion.div>
 						</motion.div>
@@ -75,7 +75,7 @@ const ProjectCard: FunctionComponent<{
 						<motion.div variants={stagger} initial='initial' animate='animate'>
 							<motion.h2
 								variants={fadeInUp}
-								className='mb-3 text-xl font-medium md:text-2xl'>
+								className='mb-3 text-xl font-semibold md:text-2xl'>
 								{name}
 							</motion.h2>
 							<motion.h3 variants={fadeInUp} className='mb-3 font-medium'>

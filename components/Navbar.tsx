@@ -34,9 +34,24 @@ const Navbar = () => {
 				{activeItem}
 			</span>
 			<div className='flex select-none space-x-5 text-base print:hidden sm:text-lg'>
-				<NavItem activeItem={activeItem} setActiveItem={setActiveItem} name='Обо мне' route='/' />
-				<NavItem activeItem={activeItem} setActiveItem={setActiveItem} name='Проекты' route='/projects' />
-				<NavItem activeItem={activeItem} setActiveItem={setActiveItem} name='Резюме' route='/resume' />
+				<NavItem
+					activeItem={activeItem}
+					setActiveItem={setActiveItem}
+					name='Обо мне'
+					route='/'
+				/>
+				<NavItem
+					activeItem={activeItem}
+					setActiveItem={setActiveItem}
+					name='Проекты'
+					route='/projects'
+				/>
+				<NavItem
+					activeItem={activeItem}
+					setActiveItem={setActiveItem}
+					name='Резюме'
+					route='/resume'
+				/>
 			</div>
 		</div>
 	);
